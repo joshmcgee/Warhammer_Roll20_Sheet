@@ -1,80 +1,124 @@
-<div class="3colrow">
-    <div class="col">
-    	<label>Name:</label><input type="text" name="attr_character_name" />
-		<label>Rank:</label><input type="text" name="attr_rank" />
-		<label>XP:</label><input type="number" name="attr_xp" />
-	</div>
 
-	<div class="col">
-		<img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/kitchensink/logo.png" />
-	</div>
 
-	<div class="col">
-		<label>Setting:</label><input type="text" name="attr_setting" />
-		<label>Race:</label><input type="text" name="attr_race" />
-	</div>
 
+<div class="main">
+
+	<!-- Unit Info -->
+	<div class="section horizontal-flow">
+		<input class="section-fill-column large-header power-input" type="text" name="attr_unit_name" Placeholder="UNIT NAME" />
+		<input class="large-header" type="number" name="attr_unit_power" min="0" max="99" placeholder="0" />
+		<h3>POWER</h3>
+	</div>
+	<div class="horizontal-line"></div>
+	
+	<!-- Models Stats -->
+	<div class="section">
+		<div class="horizontal-flow section-header">
+			<h2 class="section-single-column">No.</h2>
+			<h2 class="section-fill-column">Name</h2>
+			<div class="horizontal-flow">
+				<h2 class="section-single-column">M</h2>
+				<h2 class="section-single-column">WS</h2>
+				<h2 class="section-single-column">BS</h2>
+				<h2 class="section-single-column">S</h2>
+				<h2 class="section-single-column">T</h2>
+				<h2 class="section-single-column">W</h2>
+				<h2 class="section-single-column">A</h2>
+				<h2 class="section-single-column">Ld</h2>
+				<h2 class="section-single-column">Sv</h2>
+			</div>
+		</div>
+		<div class="horizontal-line"></div>
+		<div>
+			<fieldset class="repeating_models-info">
+				<div class="horizontal-flow">
+					<input class="single-column" type="text" name="attr_model_count" placeholder="0" />
+					<input class="fill-column" type="text" name="attr_model_name" placeholder="Name" />
+					<input class="single-column" type="text" name="attr_model_m"  min="0" max="99" placeholder="0" />
+					<input class="single-column" type="text" name="attr_model_ws" min="0" max="99" placeholder="0" />
+					<input class="single-column" type="text" name="attr_model_bs" min="0" max="99" placeholder="0" />
+					<input class="single-column" type="text" name="attr_model_s"  min="0" max="99" placeholder="0" />
+					<input class="single-column" type="text" name="attr_model_t"  min="0" max="99" placeholder="0" />
+					<input class="single-column" type="text" name="attr_model_w"  min="0" max="99" placeholder="0" />
+					<input class="single-column" type="text" name="attr_model_a"  min="0" max="99" placeholder="0" />
+					<input class="single-column" type="text" name="attr_model_ld" min="0" max="99" placeholder="0" />
+					<input class="single-column" type="text" name="attr_model_sv" min="0" max="99" placeholder="0" />
+				</div>
+			</fieldset>
+		</div>
+		<div class="horizontal-line"></div>
+		<textarea class="section-infotext" name="attr_model_infotext"></textarea>
+	</div>
+	
+	<!-- Weapons Stats -->
+	<div class="section">
+		<div class="horizontal-flow section-header">
+			<h2 class="section-fill-column" style="margin-left: 8px">WEAPON</h2>
+			<div class="horizontal-flow">
+				<h2 class="section-fit-column" style="width: 80px">RANGE</h2>
+				<h2 class="section-fit-column" style="width: 85px;">TYPE</h2>
+				<h2 class="section-single-column">S</h2>
+				<h2 class="section-single-column">AP</h2>
+				<h2 class="section-single-column">D</h2>
+				<h2 class="section-fit-column" style="width: 225px;">ABILITIES</h2>
+			</div>
+		</div>
+		<div class="horizontal-line"></div>
+		<fieldset class="repeating_weapons-info">
+			<div class="horizontal-flow">
+				<input class="fill-column weapon-name" type="text" name="attr_weapon_name" placeholder="Weapon" />
+				<div class="horizontal-flow">
+					<input class="weapon-range" type="text" name="attr_weapon_range"  min="0" max="99" placeholder="0" />
+					<input class="weapon-type" type="text" name="attr_weapon_type" placeholder="Type" />
+					<input class="single-column" type="text" name="attr_weapon_s"  min="0" max="99" placeholder="0" />
+					<input class="single-column" type="text" name="attr_weapon_ap" min="-99" max="0" placeholder="0" />
+					<input class="single-column" type="text" name="attr_weapon_d"  min="0" max="99" placeholder="0" />
+					<input class="weapon-abilities" type="text" name="attr_weapon_abilities" placeholder="-" />
+				</div>
+			</div>
+		</fieldset>
+		<div class="horizontal-line"></div>
+		
+	</div>
+	
+	<!-- Wargear -->
+	<div class="section">
+		<div class="section-header">
+			<h2 style="margin-left: 8px">WARGEAR OPTIONS</h2>
+		</div>
+		<div class="horizontal-line"></div>
+		<fieldset class="repeating_wargear-info">
+			<textarea class="section-infotext" name="attr_wargear_infotext"></textarea>
+		</fieldset>
+	</div>
+	
+	<!-- Abilities -->
+	<div class="section">
+		<div class="section-header">
+			<h2 style="margin-left: 8px">ABILITIES</h2>
+		</div>
+		<div class="horizontal-line"></div>
+		<fieldset class="repeating_abilities-info">
+			<textarea class="section-infotext" name="attr_ability_infotext"></textarea>
+		</fieldset>
+		<div class="horizontal-line"></div>
+	</div>
+	
+	<!-- Keywords -->
+	<div class="section">
+		<div class="horizontal-flow">
+			<h3 style="margin-right: 8px;">FACTION KEYWORDS:</h3>
+			<input class="keywords-text section-fill-column" type="text" name="attr_faction_keywords" />
+		</div>
+		<div class="horizontal-flow">
+			<h3 style="margin-right: 8px;">KEYWORDS:</h3>
+			<input class="keywords-text section-fill-column" type="text" name="attr_keywords" />
+		</div>
+	</div>
 </div>
 
-<hr/>
-<div class="3colrow">
-	<div class="col">
-		<h2>Attributes</h2>
 
-		<label>Agility </label><input type="text" name='attr_agility' class='sheet-short'>
-        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[1d20 + @{agility}]]}}'></button><span class='dee'>d</span>
-        <br />
-		<label>Smarts </label><input type="text" name='attr_smarts' class='sheet-short'>
-        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[1d20 + @{smarts}]]}}'></button><span class='dee'>d</span>
-        <br />
-		<label>Spirit </label><input type="text" name='attr_spirit' class='sheet-short'>
-        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[1d20 + @{spirit}]]}}'></button><span class='dee'>d</span>
-        <br />
-		<label>Strength </label><input type="text" name='attr_strength' class='sheet-short'>
-        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[1d20 + @{strength}]]}}'></button><span class='dee'>d</span>
-        <br />
-		<label>Vigor </label><input type="text" name='attr_vigor' class='sheet-short' value='25'>
-        <button type='roll' name='roll_testattack' value='&{template:default} {{name=@{character_name}}} {{result=[[1d20 + @{vigor}]]}}'></button><span class='dee'>d</span>
-        <hr />
-        
-        <h2">Skills</h2>
-        
-        <fieldset class="repeating_skills">
-            <select name="attr_dtype" class="dtype">
-                <option value="d4">d4</option>
-                <option value="d6">d6</option>
-                <option value="d8">d8</option>
-                <option value="d10">d10</option>
-                <option value="d12">d12</option>
-            </select>
-            <input type="text" name="attr_skillname" />
-        </fieldset>
 
-	</div>
 
-	<div class="col">
-		<h2>Derived Stats</h2>
-        <div class="stats">
-            <h3>Base</h3><h3>Max</h3>
-            <label>Pace</label><input type="text" name="attr_pace" /><input type="text" name="attr_pace_max"  />
-            <label>Parry</label><input type="text" name="attr_parry" /><input type="text" name="attr_parry_max" />
-            <label>Toughness</label><input type="text" name="attr_toughness"  /><input type="text" name="attr_toughness_max"  />
-            <label>Charisma</label><input type="text" name="attr_charisma" " /><input type="text" name="attr_charisma_max"  />
-        </div>
-	</div>
 
-	<div class="col">
 
-		<h2>Hindrances</h2>
-
-		<textarea name="attr_hindrances"></textarea>
-
-		<hr/>
-
-		<h2>Edges</h2>
-
-		<textarea name="attr_edges"></textarea>
-
-	</div>
-
-</div>
