@@ -104,8 +104,33 @@ input.sheet-fill-column {
 /* Pages */
 
 .sheet-tab-button {
-	height: 10px;
+	height: 16px;
+	width: 16px;
 	margin-left: 2px;
+	padding: 0px;
+	border: 1px solid #242424;
+	border-radius: 3px;
+	
+	background-size: 16px 16px;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	
+}
+
+button.sheet-tab-button:hover {
+	border-color: red;
+}
+
+.sheet-codex-button {
+	background-image: url(https://raw.githubusercontent.com/joshmcgee/Warhammer_Roll20_Sheet/master/Codex_Icon.png);
+}
+
+.sheet-army-button {
+	background-image: url(https://raw.githubusercontent.com/joshmcgee/Warhammer_Roll20_Sheet/master/Army_Icon.png);
+}
+
+.sheet-options-button {
+	background-image: url(https://raw.githubusercontent.com/joshmcgee/Warhammer_Roll20_Sheet/master/Options_Icon.png);
 }
 
 /* Options */
