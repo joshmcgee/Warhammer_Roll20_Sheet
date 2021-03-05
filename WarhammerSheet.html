@@ -7,113 +7,144 @@
 	<div class="section horizontal-flow">
 		<input class="section-fill-column large-header power-input" type="text" name="attr_unit_name" Placeholder="UNIT NAME" />
 		<input class="large-header" type="number" name="attr_unit_power" min="0" max="99" placeholder="0" />
-		<h3>POWER</h3>
-	</div>
-	<div class="horizontal-line"></div>
-	
-	<!-- Models Stats -->
-	<div class="section">
-		<div class="horizontal-flow section-header">
-			<h2 class="section-single-column">No.</h2>
-			<h2 class="section-fill-column">Name</h2>
-			<div class="horizontal-flow">
-				<h2 class="section-single-column">M</h2>
-				<h2 class="section-single-column">WS</h2>
-				<h2 class="section-single-column">BS</h2>
-				<h2 class="section-single-column">S</h2>
-				<h2 class="section-single-column">T</h2>
-				<h2 class="section-single-column">W</h2>
-				<h2 class="section-single-column">A</h2>
-				<h2 class="section-single-column">Ld</h2>
-				<h2 class="section-single-column">Sv</h2>
+		<div class="vertical-flow" >
+			<h3>POWER</h3>
+			
+			<!-- Tab Buttons -->
+			<div class="horizontal-flow" >
+				<button type="action" class="tab-button" name="act_codex" />
+				<button type="action" class="tab-button" name="act_army" />
+				<button type="action" class="tab-button" name="act_options" />
 			</div>
 		</div>
-		<div class="horizontal-line"></div>
-		<div>
-			<fieldset class="repeating_models-info">
+	</div>
+	<div class="horizontal-line"></div>
+		
+	<!-- Codex Page -->
+	<div class="sheet-codex-tab">
+	
+		<!-- Models Stats -->
+		<div class="section">
+			<div class="horizontal-flow section-header">
+				<h2 class="section-single-column">No.</h2>
+				<h2 class="section-fill-column">Name</h2>
 				<div class="horizontal-flow">
-					<input class="single-column" type="text" name="attr_model_count" placeholder="0" />
-					<input class="fill-column" type="text" name="attr_model_name" placeholder="Name" />
-					<input class="single-column" type="text" name="attr_model_m"  min="0" max="99" placeholder="0" />
-					<input class="single-column" type="text" name="attr_model_ws" min="0" max="99" placeholder="0" />
-					<input class="single-column" type="text" name="attr_model_bs" min="0" max="99" placeholder="0" />
-					<input class="single-column" type="text" name="attr_model_s"  min="0" max="99" placeholder="0" />
-					<input class="single-column" type="text" name="attr_model_t"  min="0" max="99" placeholder="0" />
-					<input class="single-column" type="text" name="attr_model_w"  min="0" max="99" placeholder="0" />
-					<input class="single-column" type="text" name="attr_model_a"  min="0" max="99" placeholder="0" />
-					<input class="single-column" type="text" name="attr_model_ld" min="0" max="99" placeholder="0" />
-					<input class="single-column" type="text" name="attr_model_sv" min="0" max="99" placeholder="0" />
+					<h2 class="section-single-column">M</h2>
+					<h2 class="section-single-column">WS</h2>
+					<h2 class="section-single-column">BS</h2>
+					<h2 class="section-single-column">S</h2>
+					<h2 class="section-single-column">T</h2>
+					<h2 class="section-single-column">W</h2>
+					<h2 class="section-single-column">A</h2>
+					<h2 class="section-single-column">Ld</h2>
+					<h2 class="section-single-column">Sv</h2>
+				</div>
+			</div>
+			<div class="horizontal-line"></div>
+			<div>
+				<fieldset class="repeating_models-info">
+					<div class="horizontal-flow">
+						<input class="single-column" type="text" name="attr_model_count" placeholder="0" />
+						<input class="fill-column" type="text" name="attr_model_name" placeholder="Name" />
+						<input class="single-column" type="text" name="attr_model_m"  min="0" max="99" placeholder="0" />
+						<input class="single-column" type="text" name="attr_model_ws" min="0" max="99" placeholder="0" />
+						<input class="single-column" type="text" name="attr_model_bs" min="0" max="99" placeholder="0" />
+						<input class="single-column" type="text" name="attr_model_s"  min="0" max="99" placeholder="0" />
+						<input class="single-column" type="text" name="attr_model_t"  min="0" max="99" placeholder="0" />
+						<input class="single-column" type="text" name="attr_model_w"  min="0" max="99" placeholder="0" />
+						<input class="single-column" type="text" name="attr_model_a"  min="0" max="99" placeholder="0" />
+						<input class="single-column" type="text" name="attr_model_ld" min="0" max="99" placeholder="0" />
+						<input class="single-column" type="text" name="attr_model_sv" min="0" max="99" placeholder="0" />
+					</div>
+				</fieldset>
+			</div>
+			<div class="horizontal-line"></div>
+			<textarea class="section-infotext" name="attr_model_infotext"></textarea>
+		</div>
+		
+		<!-- Weapons Stats -->
+		<div class="section">
+			<div class="horizontal-flow section-header">
+				<h2 class="section-fill-column" style="margin-left: 8px">WEAPON</h2>
+				<div class="horizontal-flow">
+					<h2 class="section-fit-column" style="width: 80px">RANGE</h2>
+					<h2 class="section-fit-column" style="width: 85px;">TYPE</h2>
+					<h2 class="section-single-column">S</h2>
+					<h2 class="section-single-column">AP</h2>
+					<h2 class="section-single-column">D</h2>
+					<h2 class="section-fit-column" style="width: 225px;">ABILITIES</h2>
+				</div>
+			</div>
+			<div class="horizontal-line"></div>
+			<fieldset class="repeating_weapons-info">
+				<div class="horizontal-flow">
+					<input class="fill-column weapon-name" type="text" name="attr_weapon_name" placeholder="Weapon" />
+					<div class="horizontal-flow">
+						<input class="weapon-range" type="text" name="attr_weapon_range"  min="0" max="99" placeholder="0" />
+						<input class="weapon-type" type="text" name="attr_weapon_type" placeholder="Type" />
+						<input class="single-column" type="text" name="attr_weapon_s"  min="0" max="99" placeholder="0" />
+						<input class="single-column" type="text" name="attr_weapon_ap" min="-99" max="0" placeholder="0" />
+						<input class="single-column" type="text" name="attr_weapon_d"  min="0" max="99" placeholder="0" />
+						<input class="weapon-abilities" type="text" name="attr_weapon_abilities" placeholder="-" />
+					</div>
+				</div>
+			</fieldset>
+			<div class="horizontal-line"></div>
+		</div>
+		
+		<!-- Other Wargear -->
+		<div class="section">
+			<div class="horizontal-flow section-header">
+				<h2 class="section-fill-column" style="margin-left: 8px">OTHER WARGEAR</h2>
+				<h2 class="section-fit-column" style="width: 500px">ABILITIES</h2>
+			</div>
+			<div class="horizontal-line"></div>
+			<fieldset class="repeating_other-wargear-info">
+				<div class="horizontal-flow">
+					<input class="fill-column other-wargear-name" type="text" name="attr_other_wargear" />
+					<input class="other-wargear-ability" type="text" name="attr_other_wargear_ability" />
 				</div>
 			</fieldset>
 		</div>
-		<div class="horizontal-line"></div>
-		<textarea class="section-infotext" name="attr_model_infotext"></textarea>
-	</div>
-	
-	<!-- Weapons Stats -->
-	<div class="section">
-		<div class="horizontal-flow section-header">
-			<h2 class="section-fill-column" style="margin-left: 8px">WEAPON</h2>
-			<div class="horizontal-flow">
-				<h2 class="section-fit-column" style="width: 80px">RANGE</h2>
-				<h2 class="section-fit-column" style="width: 85px;">TYPE</h2>
-				<h2 class="section-single-column">S</h2>
-				<h2 class="section-single-column">AP</h2>
-				<h2 class="section-single-column">D</h2>
-				<h2 class="section-fit-column" style="width: 225px;">ABILITIES</h2>
-			</div>
-		</div>
-		<div class="horizontal-line"></div>
-		<fieldset class="repeating_weapons-info">
-			<div class="horizontal-flow">
-				<input class="fill-column weapon-name" type="text" name="attr_weapon_name" placeholder="Weapon" />
-				<div class="horizontal-flow">
-					<input class="weapon-range" type="text" name="attr_weapon_range"  min="0" max="99" placeholder="0" />
-					<input class="weapon-type" type="text" name="attr_weapon_type" placeholder="Type" />
-					<input class="single-column" type="text" name="attr_weapon_s"  min="0" max="99" placeholder="0" />
-					<input class="single-column" type="text" name="attr_weapon_ap" min="-99" max="0" placeholder="0" />
-					<input class="single-column" type="text" name="attr_weapon_d"  min="0" max="99" placeholder="0" />
-					<input class="weapon-abilities" type="text" name="attr_weapon_abilities" placeholder="-" />
-				</div>
-			</div>
-		</fieldset>
-		<div class="horizontal-line"></div>
 		
+		<!-- Wargear Options -->
+		<div class="section">
+			<div class="section-header">
+				<h2 style="margin-left: 8px">WARGEAR OPTIONS</h2>
+			</div>
+			<div class="horizontal-line"></div>
+			<fieldset class="repeating_wargear-info">
+				<textarea class="section-infotext" name="attr_wargear_infotext"></textarea>
+			</fieldset>
+		</div>
+		
+		<!-- Abilities -->
+		<div class="section">
+			<div class="section-header">
+				<h2 style="margin-left: 8px">ABILITIES</h2>
+			</div>
+			<div class="horizontal-line"></div>
+			<fieldset class="repeating_abilities-info">
+				<textarea class="section-infotext" name="attr_ability_infotext"></textarea>
+			</fieldset>
+			<div class="horizontal-line"></div>
+		</div>
+		
+		<!-- Keywords -->
+		<div class="section">
+			<div class="horizontal-flow">
+				<h3 style="margin-right: 8px;">FACTION KEYWORDS:</h3>
+				<input class="keywords-text section-fill-column" type="text" name="attr_faction_keywords" />
+			</div>
+			<div class="horizontal-flow">
+				<h3 style="margin-right: 8px;">KEYWORDS:</h3>
+				<input class="keywords-text section-fill-column" type="text" name="attr_keywords" />
+			</div>
+		</div>
 	</div>
 	
-	<!-- Wargear -->
-	<div class="section">
-		<div class="section-header">
-			<h2 style="margin-left: 8px">WARGEAR OPTIONS</h2>
-		</div>
-		<div class="horizontal-line"></div>
-		<fieldset class="repeating_wargear-info">
-			<textarea class="section-infotext" name="attr_wargear_infotext"></textarea>
-		</fieldset>
-	</div>
-	
-	<!-- Abilities -->
-	<div class="section">
-		<div class="section-header">
-			<h2 style="margin-left: 8px">ABILITIES</h2>
-		</div>
-		<div class="horizontal-line"></div>
-		<fieldset class="repeating_abilities-info">
-			<textarea class="section-infotext" name="attr_ability_infotext"></textarea>
-		</fieldset>
-		<div class="horizontal-line"></div>
-	</div>
-	
-	<!-- Keywords -->
-	<div class="section">
-		<div class="horizontal-flow">
-			<h3 style="margin-right: 8px;">FACTION KEYWORDS:</h3>
-			<input class="keywords-text section-fill-column" type="text" name="attr_faction_keywords" />
-		</div>
-		<div class="horizontal-flow">
-			<h3 style="margin-right: 8px;">KEYWORDS:</h3>
-			<input class="keywords-text section-fill-column" type="text" name="attr_keywords" />
-		</div>
+	<div class="sheet-options-tab">
+		Options Page
 	</div>
 </div>
 

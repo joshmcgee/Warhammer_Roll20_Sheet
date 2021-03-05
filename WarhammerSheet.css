@@ -2,7 +2,7 @@
 .charsheet {
 	border-color: green;
 	border-style: solid;
-	min-width: 700px;
+	min-width: 720px;
 }
 
 input {
@@ -33,6 +33,7 @@ h3 {
 	font-family: "contrail one";
 	font-weight: normal;
 	font-size: 20px;
+	text-align: bottom;
 }
 
 .sheet-horizontal-line {
@@ -43,6 +44,12 @@ h3 {
 .sheet-horizontal-flow {
 	display: flex;
 	flex-direction: row;
+}
+
+.sheet-vertical-flow {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .sheet-section {
@@ -94,6 +101,18 @@ input.sheet-fill-column {
 	flex: 1 1 auto;
 }
 
+/* Pages */
+
+.sheet-tab-button {
+	height: 10px;
+	margin-left: 2px;
+}
+
+/* Options */
+.sheet-options-switch {
+	margin-left: 30px;
+}
+
 /* Models */
 .sheet-repeating_models-info {
 	
@@ -119,6 +138,19 @@ input[type="text"].sheet-weapon-type {
 
 input[type="text"].sheet-weapon-abilities {
 	width: 240px;
+}
+
+/* Other Wargear */
+.sheet-repeating_other-wargear-info {
+	
+}
+
+input[type="text"].sheet-other-wargear-name {
+	width: 200px;
+}
+
+input[type="text"].sheet-other-wargear-ability {
+	width: 520px;
 }
 
 /* Wargear */
